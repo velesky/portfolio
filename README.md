@@ -47,7 +47,7 @@ Vous y trouverez tout le code source, les composants et les ressources du portfo
    npm run dev
    ```
 
-   Ouvrez [http://localhost:3000](http://localhost:3001) dans votre navigateur pour voir le résultat.
+   Ouvrez [http://localhost:3001](http://localhost:3001) dans votre navigateur pour voir le résultat.
 
 ---
 *Fait avec passion 💚 par [Yao Dapré Georges Emmanuel (Velesky)](https://github.com/velesky)*
