@@ -1,0 +1,181 @@
+---
+description: Générateur de Plan d'Implémentation — Portfolio Velesky (Next.js 15 Architecture Modulaire)
+globs:
+alwaysApply: false
+---
+
+# Générateur de Plan d'Implémentation
+# Portfolio Velesky — Yao Dapré Georges Emmanuel
+
+---
+
+## Rôle et Objectif
+
+Tu es un expert senior en **Next.js 15**, développement créatif immersif et architecture modulaire React.  
+Ton rôle est d'analyser le `PRD.md` et de produire un plan d'implémentation ultra-détaillé, actionnable et respectueux de la structure définie dans `Project_structure.md`.
+
+---
+
+## Processus de Génération
+
+### Étape 1 — Lire le PRD en entier
+
+Extraire de `PRD.md` :
+1. Fonctionnalités MVP / Souhaitables / V2
+2. Données propriétaire (nom, bio, stats, projets, compétences, contact)
+3. Exigences visuelles (couleurs #c8f04a, polices, curseur custom, animations)
+4. Contraintes (Lighthouse >92, responsive, WCAG AA, prefers-reduced-motion)
+
+### Étape 2 — Mapper les fonctionnalités sur l'architecture Next.js
+
+Pour chaque fonctionnalité, indiquer :
+- Composant(s) principal(aux) → ex: `components/sections/HeroSection.tsx`
+- Hook(s) / utilitaire(s) → ex: useScroll, useInView, Framer Motion variants
+- Données source → ex: `data/projets.ts`
+- Fichier config concerné → ex: `tailwind.config.ts`, `globals.css`, `layout.tsx`
+
+Référence architecture (Project_structure.md) :
+```
+app/                  → layout.tsx | page.tsx | globals.css
+components/layout/    → Navigation.tsx | PiedDePage.tsx
+components/sections/  → HeroSection.tsx | ProjetsSection.tsx | AProposSection.tsx | CompetencesSection.tsx | ContactSection.tsx
+components/ui/        → CurseurPersonnalise.tsx | CarteProjet.tsx | BarreProgression.tsx | RevealAuScroll.tsx
+data/                 → projets.ts | competences.ts
+lib/                  → animations.ts | cn.ts | constants.ts
+public/assets/images/ → moi/moi2.webp | projets/...
+```
+
+### Étape 3 — Découper en 4 Stages
+
+```
+Stage 1 : Initialisation & Fondation     (1–2h)
+  → create-next-app + dépendances + config Tailwind/fonts/metadata
+
+Stage 2 : Layout & Composants de Base    (3–6h)
+  → Navigation, Footer, Curseur global, Reveal wrapper, layout.tsx
+
+Stage 3 : Sections & Animations          (6–10h)
+  → Hero, Projets, À propos, Compétences, Contact
+  → Animations Framer Motion + reveal scroll + progress bars
+
+Stage 4 : Polish, Tests & Déploiement    (3–5h)
+  → Responsive + perf + accessibilité + SEO + Vercel
+```
+
+### Étape 4 — Générer le Plan Détaillé
+
+Pour chaque sous-étape :
+- Format `- [ ]` (checkbox)
+- **Fichier** entre backticks
+- Description concise + actionnable
+- Notes sur pièges courants (hydration, mobile, reduced-motion, etc.)
+
+---
+
+## Format de Sortie Requis
+
+```markdown
+# Plan d'Implémentation — Portfolio Velesky
+# Dernière mise à jour : [Mois Année]
+
+---
+
+## Fonctionnalités Ciblées MVP
+
+| # | Fonctionnalité | Composant(s) principal(aux) | Priorité |
+|---|---|---|
+
+---
+
+## Stack Technique
+
+### MVP 2026
+Next.js 15 App Router · TypeScript · Tailwind CSS · Framer Motion · lucide-react · next/font/google
+
+### Dépendances clés
+framer-motion, lucide-react, next-themes, clsx, tailwind-merge, class-variance-authority
+
+---
+
+## Stages d'Implémentation
+
+### Stage 1 : Initialisation & Fondation
+**Durée estimée :** 1–2 heures
+**Dépendances :** Aucune
+
+- [ ] Commande create-next-app — [action]
+- [ ] Installation dépendances — npm install ...
+[...]
+
+[... autres stages ...]
+
+---
+
+## Tableau de Personnalisation (Source PRD)
+
+| Élément              | Valeur / Fichier source                          |
+|----------------------|--------------------------------------------------|
+| Nom complet          | Yao Dapré Georges Emmanuel                       |
+| Pseudo               | Velesky                                          |
+| Email                | emmanueldapre1@gmail.com                         |
+| GitHub               | https://github.com/velesky                       |
+| Photo principale     | public/assets/images/moi/moi2.webp               |
+| Projets (4)          | data/projets.ts                                  |
+| Compétences (6)      | data/competences.ts                              |
+
+---
+
+## Liens de Ressources Utiles
+
+| Ressource                  | URL                                              |
+|----------------------------|--------------------------------------------------|
+| Framer Motion docs         | https://www.framer.com/motion                    |
+| Tailwind config            | https://tailwindcss.com/docs/theme               |
+| next/font/google           | https://nextjs.org/docs/app/api-reference/components/font |
+| Vercel Next.js             | https://vercel.com/docs/frameworks/nextjs        |
+| Lighthouse                 | https://developer.chrome.com/docs/lighthouse     |
+
+```
+
+---
+
+## Règles de Génération Strictes
+
+- **NE JAMAIS** suggérer d'écrire du CSS/JS inline dans page.tsx ou layout.tsx
+- **TOUJOURS** mentionner `'use client';` pour composants avec useState/useEffect/useMotionValue
+- **TOUJOURS** préciser `viewport: { once: true }` pour animations reveal
+- **TOUJOURS** inclure tests reduced-motion et mobile dans Stage 4
+- **TOUJOURS** rappeler utilisation de `next/image` pour photos/projets
+- **TOUJOURS** prioriser Framer Motion sur CSS keyframes purs
+- **TOUJOURS** inclure commande Vercel ou GitHub import à la fin
+
+### Contenu à Personnaliser depuis PRD.md
+
+- Nom : Yao Dapré Georges Emmanuel (Velesky)
+- Email : emmanueldapre1@gmail.com
+- GitHub : https://github.com/velesky
+- Projets : CASIER CHAP (Flutter), iWAKILL (Next.js), LOGIFLOW (Vite+Three.js), MATHS CI (Next.js+GSAP)
+- Photo : `moi2.webp`
+- Accent : #c8f04a
+
+### Standards de Qualité
+
+- Chaque tâche = 1 fichier ou 1 action précise
+- Inclure pièges courants : hydration mismatch, cursor mobile, Safari backdrop-blur
+- Objectif final : Lighthouse Perf >92, SEO 100, Accessibilité >95
+- Déploiement Vercel comme dernière étape validée
+
+---
+
+## Prompt de Régénération
+
+```
+Génère / mets à jour Implementation.md en suivant les règles de generate.mdc,
+en intégrant les dernières modifications de PRD.md et Project_structure.md.
+```
+
+---
+
+Rappel : L'objectif est un portfolio immersif, mémorable et performant pour **Velesky**.  
+Chaque choix technique doit servir l'expérience visuelle (curseur trailing vert acidulé, reveal fluide, dark radical).  
+**Un composant = un rôle. Un rôle = un fichier.**
