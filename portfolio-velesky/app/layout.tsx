@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Bebas_Neue, DM_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/Providers";
+import { Navigation } from "@/components/layout/Navigation";
+import { PiedDePage } from "@/components/layout/PiedDePage";
+import { CurseurPersonnalise } from "@/components/ui/CurseurPersonnalise";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -45,9 +48,12 @@ export default function RootLayout({
         className={`${bebasNeue.variable} ${dmMono.variable} ${playfairDisplay.variable} font-dm-mono antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <CurseurPersonnalise />
+          <Navigation />
           <main className="min-h-screen selection:bg-accent selection:text-background">
             {children}
           </main>
+          <PiedDePage />
         </ThemeProvider>
       </body>
     </html>
