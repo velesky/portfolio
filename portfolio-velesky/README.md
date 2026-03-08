@@ -7,6 +7,13 @@ Ce dépôt contient le code source de mon portfolio professionnel, développé a
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?logo=tailwind-css)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-black?logo=framer)
 
+## 📸 Aperçu
+
+![Section Projets](/public/assets/images/screenshots/capture1.png)
+![Hero Section](/public/assets/images/screenshots/capture2.png)
+![Section Contact](/public/assets/images/screenshots/capture3.png)
+![Section Compétences](/public/assets/images/screenshots/capture4.png)
+
 ## 🌟 Fonctionnalités Principales
 
 - **Architecture Modulaire** : Séparation stricte des responsabilités (UI, Layout, Sections, Data, Lib).
@@ -27,17 +34,20 @@ Ce dépôt contient le code source de mon portfolio professionnel, développé a
 ## 📦 Installation et Lancement
 
 1. Clonez le dépôt :
+
    ```bash
    git clone https://github.com/velesky/portfolio.git
    cd portfolio
    ```
 
 2. Installez les dépendances :
+
    ```bash
    npm install
    ```
 
 3. Lancez le serveur de développement :
+
    ```bash
    npm run dev
    ```
@@ -47,6 +57,7 @@ Ce dépôt contient le code source de mon portfolio professionnel, développé a
 ## 🏗️ Architecture du Projet
 
 Le projet suit une organisation stricte par domaine :
+
 - `/app` : Pages et layouts globaux (Next.js App Router).
 - `/components/layout` : Composants de structure persistants (Navigation, Pied de page).
 - `/components/sections` : Sections majeures de la page d'accueil (Hero, Projets, À propos, etc.).
@@ -60,4 +71,5 @@ Le projet suit une organisation stricte par domaine :
 Ce projet est mon portfolio personnel, mais les retours et suggestions sont toujours les bienvenus !
 
 ---
-*Fait avec passion 💚 par [Yao Dapré Georges Emmanuel (Velesky)](https://github.com/velesky)*
+
+_Fait avec passion 💚 par [Yao Dapré Georges Emmanuel (Velesky)](https://github.com/velesky)_
