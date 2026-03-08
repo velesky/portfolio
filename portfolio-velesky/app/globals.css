@@ -39,7 +39,8 @@ body {
   cursor: none !important;
 }
 
-@media (max-width: 768px) {
+/* Restore cursor for touch devices */
+@media (hover: none), (max-width: 768px) {
   * {
     cursor: auto !important;
   }

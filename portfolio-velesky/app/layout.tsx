@@ -25,15 +25,66 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Velesky | Yao Dapré Georges Emmanuel",
-  description: "Portfolio de Yao Dapré Georges Emmanuel (Velesky), Développeur Junior spécialisé Backend & Vibe Coder basé à Abidjan.",
+  title: "Velesky | Creative Developer & Vibe Coder",
+  description:
+    "Portfolio de Yao Dapré Georges Emmanuel (Velesky). Développeur Junior spécialisé Backend & Vibe Coder basé à Abidjan. Je construis des expériences numériques modulaires, immersives et performantes.",
+  keywords: [
+    "Velesky",
+    "Yao Dapré Georges Emmanuel",
+    "Creative Developer",
+    "Développeur Côte d'Ivoire",
+    "Abidjan Tech",
+    "Next.js 15",
+    "Flutter Developer",
+    "Vibe Coder",
+    "Web Design Immersif",
+  ],
+  authors: [{ name: "Velesky" }],
+  creator: "Velesky",
+  publisher: "Velesky",
+  metadataBase: new URL("https://portfolio-velesky.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Velesky | Creative Developer & Vibe Coder",
+    description:
+      "Développeur Junior basé à Abidjan. Je fusionne ingénierie et esthétique pour créer des solutions numériques d'exception.",
+    creator: "@velesky",
+    images: ["/og-image.jpg"],
+  },
   openGraph: {
-    title: "Velesky | Portfolio",
-    description: "Développeur Junior spécialisé Backend & Vibe Coder.",
+    title: "Velesky | Creative Developer Portfolio",
+    description:
+      "Explorez l'univers de Velesky : développement backend, expertise mobile et UI immersive.",
     url: "https://portfolio-velesky.vercel.app",
     siteName: "Portfolio Velesky",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Velesky Portfolio Preview",
+      },
+    ],
   },
 };
 

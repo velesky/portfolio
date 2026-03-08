@@ -1,49 +1,51 @@
-// Footer minimal — Portfolio Velesky
+"use client";
 
+import React from "react";
+import Link from "next/link";
+import { Github, Mail, MessageCircle } from "lucide-react";
 import { VELESKY } from "@/lib/constants";
-import { Github, Mail } from "lucide-react";
 
 export function PiedDePage() {
-    const annee = new Date().getFullYear();
+  return (
+    <footer className="w-full py-12 px-6 border-t border-white/5 bg-[#080808] relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <p className="font-dm-mono text-sm opacity-40">
+            © {new Date().getFullYear()} {VELESKY.pseudo.toUpperCase()}. TOUS DROITS RÉSERVÉS.
+          </p>
+          <p className="font-dm-mono text-[10px] uppercase tracking-widest opacity-20">
+            DISPONIBLE À {VELESKY.localisation.toUpperCase()} & EN REMOTE
+          </p>
+        </div>
 
-    return (
-        <footer
-            className="border-t"
-            style={{ borderColor: "#1a1a1a", backgroundColor: "#080808" }}
-        >
-            <div className="max-w-6xl mx-auto px-6 md:px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                {/* Copyright */}
-                <p className="font-dm-mono text-xs text-text-muted">
-                    © {annee}{" "}
-                    <span style={{ color: "#c8f04a" }}>{VELESKY.pseudo}</span>{" "}
-                    — {VELESKY.nom}
-                </p>
-
-                {/* Localisation */}
-                <p className="font-dm-mono text-xs text-text-muted">
-                    {VELESKY.localisation}
-                </p>
-
-                {/* Icônes réseaux */}
-                <div className="flex items-center gap-4">
-                    <a
-                        href={VELESKY.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub Velesky"
-                        className="text-text-muted hover:text-accent transition-colors duration-200"
-                    >
-                        <Github size={16} />
-                    </a>
-                    <a
-                        href={`mailto:${VELESKY.email}`}
-                        aria-label="Email Velesky"
-                        className="text-text-muted hover:text-accent transition-colors duration-200"
-                    >
-                        <Mail size={16} />
-                    </a>
-                </div>
-            </div>
-        </footer>
-    );
+        <div className="flex gap-6">
+          <Link
+            href={VELESKY.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--accent)] transition-colors"
+            aria-label="GitHub"
+          >
+            <Github size={20} aria-hidden="true" />
+          </Link>
+          <Link
+            href={VELESKY.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[var(--accent)] transition-colors"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle size={20} aria-hidden="true" />
+          </Link>
+          <Link
+            href={`mailto:${VELESKY.email}`}
+            className="hover:text-[var(--accent)] transition-colors"
+            aria-label="Envoyer un email"
+          >
+            <Mail size={20} aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
 }
