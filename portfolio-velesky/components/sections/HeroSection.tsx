@@ -37,7 +37,7 @@ export function HeroSection() {
                 style={{ backgroundColor: "rgba(200, 240, 74, 0.05)" }}
             />
 
-            <div className="relative z-10 max-w-5xl w-full flex flex-col gap-8">
+            <div id="hero-content" className="relative z-10 max-w-5xl w-full flex flex-col gap-8">
                 {/* Tag dis créatif */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}

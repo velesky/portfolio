@@ -21,7 +21,7 @@ export const VELESKY = {
     github: "https://github.com/velesky",
     localisation: "Abidjan, Côte d\'Ivoire 🇨🇮",
     baseline: "\"Vibe coder\" basé à Abidjan. Je construis des expériences modulaires et scalables.",
-    photo: "/assets/images/moi/moi1.webp",
+    photo: "/assets/images/moi/moi2.webp",
 } as const;
 
 // Breakpoints (px)

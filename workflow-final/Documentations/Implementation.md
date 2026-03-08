@@ -1,6 +1,6 @@
 # Plan d'Implémentation — Portfolio Velesky
 
-**Dernière mise à jour :** Mars 2026 · **Stack :** Next.js 15 (App Router) · TypeScript · Tailwind CSS · Framer Motion · lucide-react
+**Dernière mise à jour :** 4 Mars 2026 · **Stack :** Next.js 15 (App Router) · TypeScript · Tailwind CSS · Framer Motion · lucide-react
 
 ---
 
@@ -62,51 +62,52 @@
 ### Stage 2 : Composants de Base & Layout
 **Durée estimée :** 4–6 heures
 
-- [ ] Implémenter `Navigation.tsx` :
+- [x] Implémenter `Navigation.tsx` :
   - useScroll pour toggle classe scrollée (bg-background/90 backdrop-blur)
   - Liens vers sections (smooth scroll via scrollIntoView ou next/link)
 
-- [ ] Implémenter `PiedDePage.tsx` :
+- [x] Implémenter `PiedDePage.tsx` :
   - Simple copyright + icônes GitHub (lucide-react)
 
-- [ ] Implémenter `CurseurPersonnalise.tsx` :
+- [x] Implémenter `CurseurPersonnalise.tsx` :
   - useMousePosition hook + Framer Motion pour trailing (animate x/y avec spring/lerp)
   - États agrandi sur hover (scale via variants)
   - Désactiver sur touch devices (useMediaQuery ou ontouchstart)
 
-- [ ] Implémenter `RevealAuScroll.tsx` (wrapper réutilisable) :
+- [x] Implémenter `RevealAuScroll.tsx` (wrapper réutilisable) :
   - motion.div with whileInView, initial, viewport once, staggerChildren
 
-- [ ] Créer `layout.tsx` complet :
+- [x] Créer `layout.tsx` complet :
   - Inclure Nav + main + Footer + Curseur
   - className={cn("...")} avec dark mode si activé
 
 ### Stage 3 : Sections Principales
 **Durée estimée :** 6–10 heures
 
-- [ ] `HeroSection.tsx` :
+- [x] `HeroSection.tsx` :
   - Titre massif Bebas Neue avec variants séquentiels (staggerChildren)
   - Parallax léger sur fond ou accroche (useScroll + useTransform)
   - Double CTA (ButtonMagnetic ou simple motion.button)
+  - ~~Scroll indicator Arrow~~ → **supprimé le 2026-03-04** (donnait l'impression de site non terminé)
 
-- [ ] `ProjetsSection.tsx` + `CarteProjet.tsx` :
+- [x] `ProjetsSection.tsx` + `CarteProjet.tsx` :
   - Grid responsive (grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
   - Hover : whileHover scale/glow, couleur accent sur titre
   - Badges via `BadgeStack.tsx` (lucide icons + text)
 
-- [ ] `AProposSection.tsx` :
-  - Photo moi2.webp (next/image, priority)
+- [x] `AProposSection.tsx` :
+  - Photo `moi1.webp` (next/image, priority) — **mise à jour le 2026-03-04** (moi2→moi1)
   - Bio texte + stats avec compteurs animés (useInView + animate value)
 
-- [ ] `CompetencesSection.tsx` + `BarreProgression.tsx` :
+- [x] `CompetencesSection.tsx` + `BarreProgression.tsx` :
   - Grid cartes
   - Barres : motion.div width from 0 to % on view
 
-- [ ] `ContactSection.tsx` :
+- [x] `ContactSection.tsx` :
   - mailto: lien + icônes GitHub (lucide)
   - Titre accentué Playfair Italic
 
-- [ ] Intégrer toutes sections dans `page.tsx` :
+- [x] Intégrer toutes sections dans `page.tsx` :
   - <HeroSection /> <ProjetsSection /> etc.
   - Ajouter RevealAuScroll autour des sections
 

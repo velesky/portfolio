@@ -54,7 +54,49 @@
 
 ## Bugs Actifs
 
-*(Aucun bug actif pour le moment — à remplir dès le premier développement)*
+*(Aucun bug actif pour le moment)*
+
+---
+
+## Changements UX — Session 2026-03-04
+
+### Changement ID: 2026-03-04-002
+
+- **Date :** 2026-03-04
+- **Type :** UX / Visuel
+- **Statut :** ✅ Appliqué + pushé
+- **Fichiers :** `HeroSection.tsx`
+- **Commit :** `c236376` — `feat(ui): retrait fleche scroll Hero + photo moi1.webp section apropos`
+
+#### Description
+Suppression du **scroll indicator** (flèche `ArrowDown` animée en bas du Hero).  
+L'élément donnait l'impression que le portfolio était non terminé / en construction.
+
+#### Solution appliquée
+```tsx
+// Supprimé de HeroSection.tsx :
+import { ArrowDown } from "lucide-react"; // import retiré
+// Bloc motion.div scroll indicator retiré (lignes 136-150)
+```
+
+---
+
+### Changement ID: 2026-03-04-003
+
+- **Date :** 2026-03-04
+- **Type :** Assets / Visuel
+- **Statut :** ✅ Appliqué + pushé
+- **Fichiers :** `lib/constants.ts`
+- **Commit :** `c236376`
+
+#### Description
+Mise à jour de la photo dans la section **À propos** : `moi2.webp` → `moi1.webp`.
+
+#### Solution appliquée
+```ts
+// lib/constants.ts — VELESKY.photo
+photo: "/assets/images/moi/moi1.webp",  // était moi2.webp
+```
 
 ---
 
