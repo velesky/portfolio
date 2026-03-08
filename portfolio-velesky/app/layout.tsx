@@ -25,7 +25,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Velesky | Creative Developer & Vibe Coder",
+  title: "Velesky | Yao Dapré Georges Emmanuel | Creative Developer & Vibe Coder",
   description:
     "Portfolio de Yao Dapré Georges Emmanuel (Velesky). Développeur Junior spécialisé Backend & Vibe Coder basé à Abidjan. Je construis des expériences numériques modulaires, immersives et performantes.",
   keywords: [
@@ -63,14 +63,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velesky | Creative Developer & Vibe Coder",
+    title: "Velesky | Yao Dapré Georges Emmanuel | Creative Developer & Vibe Coder",
     description:
       "Développeur Junior basé à Abidjan. Je fusionne ingénierie et esthétique pour créer des solutions numériques d'exception.",
     creator: "@velesky",
     images: ["/og-image.jpg"],
   },
   openGraph: {
-    title: "Velesky | Creative Developer Portfolio",
+    title: "Velesky | Yao Dapré Georges Emmanuel | Portfolio",
     description:
       "Explorez l'univers de Velesky : développement backend, expertise mobile et UI immersive.",
     url: "https://portfolio-velesky.vercel.app",
